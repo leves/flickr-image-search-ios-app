@@ -26,6 +26,8 @@
 		FC46ABC7263613250042C8AF /* SearchImagesViewController+UICollectionViewDelegateFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46ABC6263613250042C8AF /* SearchImagesViewController+UICollectionViewDelegateFlowLayout.swift */; };
 		FC46ABD126361BDD0042C8AF /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46ABD026361BDD0042C8AF /* ImageDetailViewController.swift */; };
 		FC46ABD926361C7A0042C8AF /* IImageDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46ABD826361C7A0042C8AF /* IImageDetailViewModel.swift */; };
+		FC46ABE126361F600042C8AF /* ImageDetailViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46ABE026361F600042C8AF /* ImageDetailViewController+UITableViewDataSource.swift */; };
+		FC46ABE626361FB50042C8AF /* ImageDetailViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46ABE526361FB50042C8AF /* ImageDetailViewController+UITableViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		FC46ABC6263613250042C8AF /* SearchImagesViewController+UICollectionViewDelegateFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchImagesViewController+UICollectionViewDelegateFlowLayout.swift"; sourceTree = "<group>"; };
 		FC46ABD026361BDD0042C8AF /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
 		FC46ABD826361C7A0042C8AF /* IImageDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IImageDetailViewModel.swift; sourceTree = "<group>"; };
+		FC46ABE026361F600042C8AF /* ImageDetailViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageDetailViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		FC46ABE526361FB50042C8AF /* ImageDetailViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageDetailViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +217,8 @@
 			children = (
 				FC46ABD826361C7A0042C8AF /* IImageDetailViewModel.swift */,
 				FC46ABD026361BDD0042C8AF /* ImageDetailViewController.swift */,
+				FC46ABE026361F600042C8AF /* ImageDetailViewController+UITableViewDataSource.swift */,
+				FC46ABE526361FB50042C8AF /* ImageDetailViewController+UITableViewDelegate.swift */,
 			);
 			path = ImageDetailViewController;
 			sourceTree = "<group>";
@@ -357,9 +363,11 @@
 				FC46ABAD26360D020042C8AF /* Helpers.swift in Sources */,
 				FC46ABC7263613250042C8AF /* SearchImagesViewController+UICollectionViewDelegateFlowLayout.swift in Sources */,
 				FC46ABA726360A8F0042C8AF /* SearchImagesViewController+UISearchResultsUpdating.swift in Sources */,
+				FC46ABE626361FB50042C8AF /* ImageDetailViewController+UITableViewDelegate.swift in Sources */,
 				FC46AB81263603190042C8AF /* MainCoordinator.swift in Sources */,
 				FC46ABB526360E620042C8AF /* ImageItemCollectionViewCell.swift in Sources */,
 				FC46AB94263606440042C8AF /* ISearchImagesCoordinator.swift in Sources */,
+				FC46ABE126361F600042C8AF /* ImageDetailViewController+UITableViewDataSource.swift in Sources */,
 				FC246881263096B300DB7A04 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
