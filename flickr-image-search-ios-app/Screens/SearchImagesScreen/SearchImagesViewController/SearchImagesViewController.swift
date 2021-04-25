@@ -36,6 +36,8 @@ final class SearchImagesViewController: UIViewController {
         collectionView.backgroundColor = .systemBackground
         collectionView.register(ImageItemCollectionViewCell.self,
                                 forCellWithReuseIdentifier: ImageItemCollectionViewCell.reuseIdentifier)
+        collectionView.register(LoadingCollectionViewCell.self,
+                                forCellWithReuseIdentifier: LoadingCollectionViewCell.reuseIdentifier)
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.alwaysBounceVertical = true
