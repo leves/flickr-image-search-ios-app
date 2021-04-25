@@ -17,6 +17,10 @@ final class ImageDetailViewController: UIViewController {
         static let infoSectionHeaderText = NSLocalizedString("Information", comment: .empty)
     }
     
+    // MARK: - Statics
+    
+    static let headerHeight: CGFloat = 250
+    
     // MARK: - UI Elements
     
     // TODO: add states (empty, loading, filled with content or empty)
@@ -29,6 +33,8 @@ final class ImageDetailViewController: UIViewController {
         tableView.tableFooterView = UIView()
         return tableView
     }()
+    
+    private let headerImageView = InteractiveImageViewWithGuide()
     
     // MARK: - Properties
     
@@ -52,7 +58,13 @@ final class ImageDetailViewController: UIViewController {
         super.viewDidLoad()
         self.title = viewModel?.titleText
         buildViewHierarchy()
+        setupTableViewHeader()
         viewModel?.loadExifInformation()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        headerImageView.startGuidingAnimation()
     }
     
     // MARK: - Build View Hierarchy
@@ -67,6 +79,19 @@ final class ImageDetailViewController: UIViewController {
         tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0).isActive = true
         tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 0).isActive = true
         tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0).isActive = true
+    }
+    
+    // MARK: - Setup Table View Header
+    
+    private func setupTableViewHeader() {
+        let containerView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: Self.headerHeight))
+        containerView.addSubview(headerImageView)
+        headerImageView.translatesAutoresizingMaskIntoConstraints = false
+        headerImageView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 0).isActive = true
+        headerImageView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: 0).isActive = true
+        headerImageView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 0).isActive = true
+        headerImageView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: 0).isActive = true
+        tableView.tableHeaderView = containerView
     }
     
     // MARK: - Setup (Delegate)Binding between view controller and view model
