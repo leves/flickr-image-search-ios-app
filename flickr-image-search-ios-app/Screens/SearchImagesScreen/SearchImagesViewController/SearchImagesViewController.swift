@@ -98,7 +98,7 @@ final class SearchImagesViewController: UIViewController {
     private func setupSearchController() {
         self.navigationItem.searchController = searchController
         self.definesPresentationContext = true
-        searchController.searchBar.text = viewModel?.searchTerm ?? ""
+        searchController.searchBar.text = viewModel?.searchTerm ?? .empty
     }
     
     // MARK: - Setup (Delegate)Binding between view controller and view model
