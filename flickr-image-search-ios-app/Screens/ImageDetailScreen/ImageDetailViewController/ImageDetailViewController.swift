@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 // MARK: - ImageDetailViewController
 
@@ -59,6 +60,11 @@ final class ImageDetailViewController: UIViewController {
         self.title = viewModel?.titleText
         buildViewHierarchy()
         setupTableViewHeader()
+        
+        headerImageView.imageView.kf.setImage(with: viewModel?.imageURL) { [weak self] (_) in
+            self?.headerImageView.updateZoomScale()
+        } // TODO: add placeholder image and/or loading indicator
+        
         viewModel?.loadExifInformation()
     }
     
