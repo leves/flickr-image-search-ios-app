@@ -59,6 +59,8 @@ final class SearchImagesViewController: UIViewController {
         }
     }
     
+    private var collectionViewLoadingItemIndexPath: IndexPath?
+    
     // MARK: - Init(s)
     
     convenience init(viewModel: ISearchImagesViewModel) {
@@ -118,11 +120,27 @@ final class SearchImagesViewController: UIViewController {
 extension SearchImagesViewController: ISearchImagesViewModelDelegate {
     
     func imagesDidLoad() {
-        
+        self.collectionView.reloadData()
     }
     
     func imagesDidUpdate(at range: Range<Int>) {
+        let locations = range.map{ IndexPath(row: $0, section: 0) }
         
+        self.collectionView.performBatchUpdates({
+            
+            // Remove loading item before update (if needed)
+            if let loadingItemIndexPath = self.collectionViewLoadingItemIndexPath {
+                self.collectionView.deleteItems(at: [loadingItemIndexPath])
+            }
+            
+            // Add fetched items to the list
+            self.collectionView.insertItems(at: locations)
+            
+            // Add loading item to the end of the list (if needed)
+            if let viewModel = viewModel, viewModel.hasMoreImageToFetch == true {
+                self.collectionView.insertItems(at: [IndexPath(item: viewModel.images.count, section: 0)])
+            }
+        }, completion: nil)
     }
 }
 
