@@ -81,6 +81,6 @@ final class ImageDetailViewController: UIViewController {
 extension ImageDetailViewController: IImageDetailViewModelDelegate {
     
     func exifInformationDidLoad() {
-        
+        self.tableView.reloadData()
     }
 }
