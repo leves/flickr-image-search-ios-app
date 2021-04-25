@@ -18,6 +18,11 @@ final class SearchImagesViewController: UIViewController {
         static let searchPlaceholder = NSLocalizedString("Search for Images", comment: .empty)
     }
     
+    // MARK: - Statics
+    
+    static let defaultSpacingForCollectionView: CGFloat = 10
+    static let defaultAspectRatioForCollectionViewItem: CGFloat = 3/4 // 4:3 -> 3/4, 16:9 -> 9/16
+    
     // MARK: - UI Elements
     
     private lazy var searchController: UISearchController = {
