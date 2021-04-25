@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -31,6 +31,7 @@
 		FC46ABEB2636206D0042C8AF /* InformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46ABEA2636206D0042C8AF /* InformationTableViewCell.swift */; };
 		FC46ABF1263624810042C8AF /* InteractiveImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46ABF0263624810042C8AF /* InteractiveImageView.swift */; };
 		FC46ABF6263628E60042C8AF /* InteractiveImageViewWithGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46ABF5263628E60042C8AF /* InteractiveImageViewWithGuide.swift */; };
+		FC46ABFC26362EF80042C8AF /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FC46ABFB26362EF80042C8AF /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC46ABFC26362EF80042C8AF /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +258,9 @@
 			dependencies = (
 			);
 			name = "flickr-image-search-ios-app";
+			packageProductDependencies = (
+				FC46ABFB26362EF80042C8AF /* Kingfisher */,
+			);
 			productName = "flickr-image-search-ios-app";
 			productReference = FC24687B263096B300DB7A04 /* flickr-image-search-ios-app.app */;
 			productType = "com.apple.product-type.application";
@@ -327,6 +332,9 @@
 				Base,
 			);
 			mainGroup = FC246872263096B300DB7A04;
+			packageReferences = (
+				FC46ABFA26362EF80042C8AF /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = FC24687C263096B300DB7A04 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -715,6 +723,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FC46ABFA26362EF80042C8AF /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FC46ABFB26362EF80042C8AF /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC46ABFA26362EF80042C8AF /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FC246873263096B300DB7A04 /* Project object */;
 }
