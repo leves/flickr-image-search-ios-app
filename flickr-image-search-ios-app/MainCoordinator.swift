@@ -29,6 +29,7 @@ final class MainCoordinator {
 extension MainCoordinator: ISearchImagesCoordinator {
     
     func selectPhoto() {
-        
+        let imageDetailViewController = ImageDetailViewController()
+        navigationController.pushViewController(imageDetailViewController, animated: true)
     }
 }
