@@ -28,6 +28,18 @@ final class SearchImagesViewController: UIViewController {
         return searchController
     }()
     
+    // TODO: add states (empty, loading, filled with content or empty)
+    private lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.backgroundColor = .systemBackground
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.alwaysBounceVertical = true
+        collectionView.contentInsetAdjustmentBehavior = .always
+        return collectionView
+    }()
+    
     // MARK: - Properties
     
     weak var coordinator: ISearchImagesCoordinator?
@@ -49,8 +61,23 @@ final class SearchImagesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        buildViewHierarchy()
         setupSearchController()
         resumeWithPreviousSearch()
+    }
+    
+    // MARK: - Build View Hierarchy
+    
+    private func buildViewHierarchy() {
+        
+        // MARK: Collection View
+        
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(collectionView)
+        collectionView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 0).isActive = true
+        collectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0).isActive = true
+        collectionView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 0).isActive = true
+        collectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0).isActive = true
     }
     
     // MARK: - Setup Search
@@ -86,4 +113,23 @@ extension SearchImagesViewController: ISearchImagesViewModelDelegate {
     func imagesDidUpdate(at range: Range<Int>) {
         
     }
+}
+
+// MARK: - SearchImagesViewController+UICollectionViewDataSource
+
+extension SearchImagesViewController: UICollectionViewDataSource {
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        fatalError()
+    }
+}
+
+// MARK: - SearchImagesViewController+UICollectionViewDelegate
+
+extension SearchImagesViewController: UICollectionViewDelegate {
+
 }
