@@ -151,7 +151,7 @@ extension SearchImagesViewController: UICollectionViewDataSource {
         
         if let imageItem = item as? ImageItemCollectionViewCell,
            let data = viewModel?.images[indexPath.row] {
-            // TODO: setup cell
+            viewModel?.configure(cell: imageItem, withData: data)
         }
         
         return item

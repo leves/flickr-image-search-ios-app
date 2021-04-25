@@ -20,6 +20,7 @@ protocol ISearchImagesViewModel: class {
     
     func searchImagesByText(_ text: String)
     func loadMoreImages()
+    func configure(cell: ImageItemCollectionViewCell, withData data: ImageURLProvider)
 }
 
 // MARK: - ImageURLProvider
