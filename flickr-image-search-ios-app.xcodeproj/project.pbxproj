@@ -19,6 +19,7 @@
 		FC46AB94263606440042C8AF /* ISearchImagesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46AB93263606440042C8AF /* ISearchImagesCoordinator.swift */; };
 		FC46AB99263606530042C8AF /* ISearchImagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46AB98263606530042C8AF /* ISearchImagesViewModel.swift */; };
 		FC46ABA726360A8F0042C8AF /* SearchImagesViewController+UISearchResultsUpdating.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46ABA626360A8F0042C8AF /* SearchImagesViewController+UISearchResultsUpdating.swift */; };
+		FC46ABAD26360D020042C8AF /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46ABAC26360D020042C8AF /* Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		FC46AB93263606440042C8AF /* ISearchImagesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISearchImagesCoordinator.swift; sourceTree = "<group>"; };
 		FC46AB98263606530042C8AF /* ISearchImagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISearchImagesViewModel.swift; sourceTree = "<group>"; };
 		FC46ABA626360A8F0042C8AF /* SearchImagesViewController+UISearchResultsUpdating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchImagesViewController+UISearchResultsUpdating.swift"; sourceTree = "<group>"; };
+		FC46ABAC26360D020042C8AF /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				FC46AB89263604530042C8AF /* SearchImagesScreen */,
+				FC46ABAB26360CF30042C8AF /* Shared */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -170,6 +173,14 @@
 				FC46ABA626360A8F0042C8AF /* SearchImagesViewController+UISearchResultsUpdating.swift */,
 			);
 			path = SearchImagesViewController;
+			sourceTree = "<group>";
+		};
+		FC46ABAB26360CF30042C8AF /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				FC46ABAC26360D020042C8AF /* Helpers.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +316,7 @@
 				FC46AB99263606530042C8AF /* ISearchImagesViewModel.swift in Sources */,
 				FC46AB8C263604A20042C8AF /* SearchImagesViewController.swift in Sources */,
 				FC24687F263096B300DB7A04 /* AppDelegate.swift in Sources */,
+				FC46ABAD26360D020042C8AF /* Helpers.swift in Sources */,
 				FC46ABA726360A8F0042C8AF /* SearchImagesViewController+UISearchResultsUpdating.swift in Sources */,
 				FC46AB81263603190042C8AF /* MainCoordinator.swift in Sources */,
 				FC46AB94263606440042C8AF /* ISearchImagesCoordinator.swift in Sources */,

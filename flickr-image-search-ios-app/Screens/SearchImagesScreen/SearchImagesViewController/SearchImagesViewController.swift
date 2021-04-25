@@ -14,7 +14,8 @@ final class SearchImagesViewController: UIViewController {
     // MARK: - LocalizedText
     
     enum LocalizedText {
-        static let searchPlaceholder = NSLocalizedString("Search for Images", comment: "")
+        static let titleText = NSLocalizedString("Image Search", comment: .empty)
+        static let searchPlaceholder = NSLocalizedString("Search for Images", comment: .empty)
     }
     
     // MARK: - UI Elements
@@ -61,6 +62,7 @@ final class SearchImagesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = LocalizedText.titleText
         buildViewHierarchy()
         setupSearchController()
         resumeWithPreviousSearch()
