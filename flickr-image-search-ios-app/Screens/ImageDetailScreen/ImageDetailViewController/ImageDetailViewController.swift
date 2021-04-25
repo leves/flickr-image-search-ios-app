@@ -22,6 +22,7 @@ final class ImageDetailViewController: UIViewController {
     // TODO: add states (empty, loading, filled with content or empty)
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
+        tableView.register(InformationTableViewCell.self, forCellReuseIdentifier: InformationTableViewCell.reuseIdentifier)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.dataSource = self
         tableView.delegate = self
