@@ -22,6 +22,7 @@
 		FC46ABAD26360D020042C8AF /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46ABAC26360D020042C8AF /* Helpers.swift */; };
 		FC46ABB526360E620042C8AF /* ImageItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46ABB426360E620042C8AF /* ImageItemCollectionViewCell.swift */; };
 		FC46ABBA26360F960042C8AF /* LoadingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46ABB926360F960042C8AF /* LoadingCollectionViewCell.swift */; };
+		FC46ABBF263612810042C8AF /* SearchImagesViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46ABBE263612810042C8AF /* SearchImagesViewController+UICollectionViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		FC46ABAC26360D020042C8AF /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		FC46ABB426360E620042C8AF /* ImageItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		FC46ABB926360F960042C8AF /* LoadingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCollectionViewCell.swift; sourceTree = "<group>"; };
+		FC46ABBE263612810042C8AF /* SearchImagesViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchImagesViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 				FC46AB93263606440042C8AF /* ISearchImagesCoordinator.swift */,
 				FC46AB98263606530042C8AF /* ISearchImagesViewModel.swift */,
 				FC46AB8B263604A20042C8AF /* SearchImagesViewController.swift */,
+				FC46ABBE263612810042C8AF /* SearchImagesViewController+UICollectionViewDelegate.swift */,
 				FC46ABA626360A8F0042C8AF /* SearchImagesViewController+UISearchResultsUpdating.swift */,
 			);
 			path = SearchImagesViewController;
@@ -321,6 +324,7 @@
 			files = (
 				FC46AB99263606530042C8AF /* ISearchImagesViewModel.swift in Sources */,
 				FC46AB8C263604A20042C8AF /* SearchImagesViewController.swift in Sources */,
+				FC46ABBF263612810042C8AF /* SearchImagesViewController+UICollectionViewDelegate.swift in Sources */,
 				FC24687F263096B300DB7A04 /* AppDelegate.swift in Sources */,
 				FC46ABBA26360F960042C8AF /* LoadingCollectionViewCell.swift in Sources */,
 				FC46ABAD26360D020042C8AF /* Helpers.swift in Sources */,

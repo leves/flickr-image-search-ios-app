@@ -152,9 +152,3 @@ extension SearchImagesViewController: UICollectionViewDataSource {
         return item
     }
 }
-
-// MARK: - SearchImagesViewController+UICollectionViewDelegate
-
-extension SearchImagesViewController: UICollectionViewDelegate {
-
-}
