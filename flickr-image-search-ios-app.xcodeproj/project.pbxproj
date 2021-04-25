@@ -15,6 +15,7 @@
 		FC246896263096B500DB7A04 /* flickr_image_search_ios_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC246895263096B500DB7A04 /* flickr_image_search_ios_appTests.swift */; };
 		FC2468A1263096B500DB7A04 /* flickr_image_search_ios_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2468A0263096B500DB7A04 /* flickr_image_search_ios_appUITests.swift */; };
 		FC46AB81263603190042C8AF /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46AB80263603190042C8AF /* MainCoordinator.swift */; };
+		FC46AB8C263604A20042C8AF /* SearchImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46AB8B263604A20042C8AF /* SearchImagesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		FC2468A0263096B500DB7A04 /* flickr_image_search_ios_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flickr_image_search_ios_appUITests.swift; sourceTree = "<group>"; };
 		FC2468A2263096B500DB7A04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC46AB80263603190042C8AF /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		FC46AB8B263604A20042C8AF /* SearchImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchImagesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		FC24687D263096B300DB7A04 /* flickr-image-search-ios-app */ = {
 			isa = PBXGroup;
 			children = (
+				FC46AB88263604330042C8AF /* Screens */,
 				FC24687E263096B300DB7A04 /* AppDelegate.swift */,
 				FC246880263096B300DB7A04 /* SceneDelegate.swift */,
 				FC46AB80263603190042C8AF /* MainCoordinator.swift */,
@@ -134,6 +137,30 @@
 				FC24688C263096B400DB7A04 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FC46AB88263604330042C8AF /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				FC46AB89263604530042C8AF /* SearchImagesScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		FC46AB89263604530042C8AF /* SearchImagesScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FC46AB8A263604930042C8AF /* SearchImagesViewController */,
+			);
+			path = SearchImagesScreen;
+			sourceTree = "<group>";
+		};
+		FC46AB8A263604930042C8AF /* SearchImagesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FC46AB8B263604A20042C8AF /* SearchImagesViewController.swift */,
+			);
+			path = SearchImagesViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC46AB8C263604A20042C8AF /* SearchImagesViewController.swift in Sources */,
 				FC24687F263096B300DB7A04 /* AppDelegate.swift in Sources */,
 				FC46AB81263603190042C8AF /* MainCoordinator.swift in Sources */,
 				FC246881263096B300DB7A04 /* SceneDelegate.swift in Sources */,
