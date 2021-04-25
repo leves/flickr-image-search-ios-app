@@ -19,6 +19,7 @@ protocol IImageDetailViewModel: class {
     var delegate: IImageDetailViewModelDelegate? { get set }
     
     func loadExifInformation()
+    func configure(cell: InformationTableViewCell, withData data: (label: String, value: String))
 }
 
 // MARK: - ISearchImagesViewModelDelegate
