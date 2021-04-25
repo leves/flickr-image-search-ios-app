@@ -30,6 +30,7 @@
 		FC46ABE626361FB50042C8AF /* ImageDetailViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46ABE526361FB50042C8AF /* ImageDetailViewController+UITableViewDelegate.swift */; };
 		FC46ABEB2636206D0042C8AF /* InformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46ABEA2636206D0042C8AF /* InformationTableViewCell.swift */; };
 		FC46ABF1263624810042C8AF /* InteractiveImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46ABF0263624810042C8AF /* InteractiveImageView.swift */; };
+		FC46ABF6263628E60042C8AF /* InteractiveImageViewWithGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46ABF5263628E60042C8AF /* InteractiveImageViewWithGuide.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		FC46ABE526361FB50042C8AF /* ImageDetailViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageDetailViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
 		FC46ABEA2636206D0042C8AF /* InformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationTableViewCell.swift; sourceTree = "<group>"; };
 		FC46ABF0263624810042C8AF /* InteractiveImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveImageView.swift; sourceTree = "<group>"; };
+		FC46ABF5263628E60042C8AF /* InteractiveImageViewWithGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveImageViewWithGuide.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				FC46ABF0263624810042C8AF /* InteractiveImageView.swift */,
+				FC46ABF5263628E60042C8AF /* InteractiveImageViewWithGuide.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				FC46AB81263603190042C8AF /* MainCoordinator.swift in Sources */,
 				FC46ABB526360E620042C8AF /* ImageItemCollectionViewCell.swift in Sources */,
 				FC46ABEB2636206D0042C8AF /* InformationTableViewCell.swift in Sources */,
+				FC46ABF6263628E60042C8AF /* InteractiveImageViewWithGuide.swift in Sources */,
 				FC46AB94263606440042C8AF /* ISearchImagesCoordinator.swift in Sources */,
 				FC46ABF1263624810042C8AF /* InteractiveImageView.swift in Sources */,
 				FC46ABE126361F600042C8AF /* ImageDetailViewController+UITableViewDataSource.swift in Sources */,

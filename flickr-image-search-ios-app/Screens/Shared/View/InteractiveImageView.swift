@@ -9,7 +9,7 @@ import UIKit
 
 // MARK: - InteractiveImageView
 
-final class InteractiveImageView: UIView {
+class InteractiveImageView: UIView {
     
     // MARK: - UI Elements
     
@@ -94,30 +94,5 @@ extension InteractiveImageView: UIScrollViewDelegate {
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return imageView
-    }
-}
-
-// MARK: - TestInteractiveImageViewViewController
-
-final class TestInteractiveImageViewViewController: UIViewController {
-    
-    private let interactiveImageView = InteractiveImageView(image: #imageLiteral(resourceName: "sample-image"))
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.view.backgroundColor = .red
-        setupViewHierarchy()
-    }
-    
-    private func setupViewHierarchy() {
-        
-        // MARK: Interactive Image View
-        
-        interactiveImageView.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(interactiveImageView)
-        interactiveImageView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 0).isActive = true
-        interactiveImageView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0).isActive = true
-        interactiveImageView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 0).isActive = true
-        interactiveImageView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0).isActive = true
     }
 }
