@@ -18,8 +18,17 @@ final class MainCoordinator {
     }
     
     func start() {
-        let searchImagesViewController = UIViewController()
-        searchImagesViewController.view.backgroundColor = .red
+        let searchImagesViewController = SearchImagesViewController()
+        searchImagesViewController.coordinator = self
         navigationController.pushViewController(searchImagesViewController, animated: false)
+    }
+}
+
+// MARK: - MainCoordinator+ISearchImagesCoordinator
+
+extension MainCoordinator: ISearchImagesCoordinator {
+    
+    func selectPhoto() {
+        
     }
 }

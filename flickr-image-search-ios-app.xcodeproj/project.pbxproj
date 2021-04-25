@@ -16,6 +16,8 @@
 		FC2468A1263096B500DB7A04 /* flickr_image_search_ios_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2468A0263096B500DB7A04 /* flickr_image_search_ios_appUITests.swift */; };
 		FC46AB81263603190042C8AF /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46AB80263603190042C8AF /* MainCoordinator.swift */; };
 		FC46AB8C263604A20042C8AF /* SearchImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46AB8B263604A20042C8AF /* SearchImagesViewController.swift */; };
+		FC46AB94263606440042C8AF /* ISearchImagesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46AB93263606440042C8AF /* ISearchImagesCoordinator.swift */; };
+		FC46AB99263606530042C8AF /* ISearchImagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46AB98263606530042C8AF /* ISearchImagesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		FC2468A2263096B500DB7A04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC46AB80263603190042C8AF /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		FC46AB8B263604A20042C8AF /* SearchImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchImagesViewController.swift; sourceTree = "<group>"; };
+		FC46AB93263606440042C8AF /* ISearchImagesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISearchImagesCoordinator.swift; sourceTree = "<group>"; };
+		FC46AB98263606530042C8AF /* ISearchImagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISearchImagesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +105,10 @@
 		FC24687D263096B300DB7A04 /* flickr-image-search-ios-app */ = {
 			isa = PBXGroup;
 			children = (
-				FC46AB88263604330042C8AF /* Screens */,
 				FC24687E263096B300DB7A04 /* AppDelegate.swift */,
 				FC246880263096B300DB7A04 /* SceneDelegate.swift */,
 				FC46AB80263603190042C8AF /* MainCoordinator.swift */,
+				FC46AB88263604330042C8AF /* Screens */,
 				FC2468B42630979100DB7A04 /* Supporting Files */,
 			);
 			path = "flickr-image-search-ios-app";
@@ -158,6 +162,8 @@
 		FC46AB8A263604930042C8AF /* SearchImagesViewController */ = {
 			isa = PBXGroup;
 			children = (
+				FC46AB93263606440042C8AF /* ISearchImagesCoordinator.swift */,
+				FC46AB98263606530042C8AF /* ISearchImagesViewModel.swift */,
 				FC46AB8B263604A20042C8AF /* SearchImagesViewController.swift */,
 			);
 			path = SearchImagesViewController;
@@ -293,9 +299,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC46AB99263606530042C8AF /* ISearchImagesViewModel.swift in Sources */,
 				FC46AB8C263604A20042C8AF /* SearchImagesViewController.swift in Sources */,
 				FC24687F263096B300DB7A04 /* AppDelegate.swift in Sources */,
 				FC46AB81263603190042C8AF /* MainCoordinator.swift in Sources */,
+				FC46AB94263606440042C8AF /* ISearchImagesCoordinator.swift in Sources */,
 				FC246881263096B300DB7A04 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
