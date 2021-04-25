@@ -124,13 +124,32 @@ extension SearchImagesViewController: ISearchImagesViewModelDelegate {
 // MARK: - SearchImagesViewController+UICollectionViewDataSource
 
 extension SearchImagesViewController: UICollectionViewDataSource {
-
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        guard let viewModel = viewModel else { return 0 }
+        let searchItemIfNeeded = viewModel.hasMoreImageToFetch ? 1 : 0
+        return viewModel.images.count + searchItemIfNeeded
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        fatalError()
+        
+        let reuseIdentifier: String
+        
+        if viewModel!.images.indices.contains(indexPath.row) {
+            reuseIdentifier = ImageItemCollectionViewCell.reuseIdentifier
+        }else{
+            reuseIdentifier = LoadingCollectionViewCell.reuseIdentifier
+        }
+        
+        let item = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
+                                                      for: indexPath)
+        
+        if let imageItem = item as? ImageItemCollectionViewCell,
+           let data = viewModel?.images[indexPath.row] {
+            // TODO: setup cell
+        }
+        
+        return item
     }
 }
 
