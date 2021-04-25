@@ -14,6 +14,7 @@
 		FC24688B263096B400DB7A04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC246889263096B400DB7A04 /* LaunchScreen.storyboard */; };
 		FC246896263096B500DB7A04 /* flickr_image_search_ios_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC246895263096B500DB7A04 /* flickr_image_search_ios_appTests.swift */; };
 		FC2468A1263096B500DB7A04 /* flickr_image_search_ios_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2468A0263096B500DB7A04 /* flickr_image_search_ios_appUITests.swift */; };
+		FC46AB81263603190042C8AF /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46AB80263603190042C8AF /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		FC24689C263096B500DB7A04 /* flickr-image-search-ios-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "flickr-image-search-ios-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2468A0263096B500DB7A04 /* flickr_image_search_ios_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flickr_image_search_ios_appUITests.swift; sourceTree = "<group>"; };
 		FC2468A2263096B500DB7A04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC46AB80263603190042C8AF /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				FC24687E263096B300DB7A04 /* AppDelegate.swift */,
 				FC246880263096B300DB7A04 /* SceneDelegate.swift */,
+				FC46AB80263603190042C8AF /* MainCoordinator.swift */,
 				FC2468B42630979100DB7A04 /* Supporting Files */,
 			);
 			path = "flickr-image-search-ios-app";
@@ -264,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC24687F263096B300DB7A04 /* AppDelegate.swift in Sources */,
+				FC46AB81263603190042C8AF /* MainCoordinator.swift in Sources */,
 				FC246881263096B300DB7A04 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
