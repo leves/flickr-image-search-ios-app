@@ -14,7 +14,8 @@ final class FlickrSearchImageViewModel: ISearchImagesViewModel {
     
     static let resultsPerPage = 20
     
-    var searchTerm = "Dog"
+    @UserDefault(key: "image-search-term", defaultValue: "dog")
+    var searchTerm: String
     
     private(set) var images: [ImageURLProvider]
     private(set) var hasMoreImageToFetch = false
