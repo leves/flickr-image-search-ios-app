@@ -79,6 +79,16 @@ final class SearchImagesViewController: UIViewController {
         resumeWithPreviousSearch()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        subscribeToKeyboardNotifications()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        unsubscribeToKeyboardNotifications()
+    }
+    
     // MARK: - Build View Hierarchy
     
     private func buildViewHierarchy() {
@@ -112,6 +122,34 @@ final class SearchImagesViewController: UIViewController {
     private func resumeWithPreviousSearch() {
         guard let previousSearchTerm = self.viewModel?.searchTerm else { return }
         self.viewModel?.searchImagesByText(previousSearchTerm)
+    }
+    
+    // MARK: - Handle Keyboard
+    
+    private func subscribeToKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillShowNotification), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillHideNotification), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    private func unsubscribeToKeyboardNotifications() {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc
+    private func handleKeyboardWillShowNotification(notification: Notification) {
+        guard let keyboardInfo = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+        let keyboardFrameEndFrame = keyboardInfo.cgRectValue
+        let bottomInset = keyboardFrameEndFrame.height - self.view.safeAreaInsets.bottom
+        collectionView.contentInset.bottom = bottomInset
+        collectionView.verticalScrollIndicatorInsets.bottom = bottomInset
+    }
+    
+    @objc
+    private func handleKeyboardWillHideNotification() {
+        let bottomInset: CGFloat = 0
+        collectionView.contentInset.bottom = bottomInset
+        collectionView.verticalScrollIndicatorInsets.bottom = bottomInset
     }
 }
 
