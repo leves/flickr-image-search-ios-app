@@ -164,10 +164,14 @@ extension SearchImagesViewController: ISearchImagesViewModelDelegate {
     
     func imagesDidLoad() {
         self.collectionView.reloadData()
+        if self.collectionView.contentOffset.y > 0 {
+            self.collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: .top)
+        }
     }
     
     func imagesDidUpdate(at range: Range<Int>) {
         let locations = range.map{ IndexPath(row: $0, section: 0) }
+        //print(locations)
         
         self.collectionView.performBatchUpdates({
             
