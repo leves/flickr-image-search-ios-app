@@ -200,6 +200,7 @@ extension SearchImagesViewController: UICollectionViewDataSource {
             reuseIdentifier = ImageItemCollectionViewCell.reuseIdentifier
         }else{
             reuseIdentifier = LoadingCollectionViewCell.reuseIdentifier
+            collectionViewLoadingItemIndexPath = indexPath
         }
         
         let item = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
