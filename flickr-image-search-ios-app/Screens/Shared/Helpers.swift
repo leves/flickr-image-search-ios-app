@@ -12,6 +12,10 @@ import Foundation
 extension String {
     
     static var empty: String { "" }
+    
+    var nilIfEmpty: String? {
+        self == "" ? nil : self
+    }
 }
 
 // MARK: - UserDefault Property Wrapper
