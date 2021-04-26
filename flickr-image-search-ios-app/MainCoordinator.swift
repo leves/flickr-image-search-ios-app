@@ -18,7 +18,8 @@ final class MainCoordinator {
     }
     
     func start() {
-        let searchImagesViewController = SearchImagesViewController()
+        let viewModel = FlickrSearchImageViewModel()
+        let searchImagesViewController = SearchImagesViewController(viewModel: viewModel)
         searchImagesViewController.coordinator = self
         navigationController.pushViewController(searchImagesViewController, animated: false)
     }
