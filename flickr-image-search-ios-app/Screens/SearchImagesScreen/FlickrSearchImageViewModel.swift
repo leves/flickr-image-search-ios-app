@@ -25,6 +25,13 @@ final class FlickrSearchImageViewModel: ISearchImagesViewModel {
     private let flickrService = FlickrService() // TODO: FlickrService is coupled with ViewModel -> decoupled it!!!
     private var currentPage = 1
     
+    private lazy var loadMoreImagesOperationQueue: OperationQueue = { // protect against 'loadMoreImages()' spamming
+        let operationQueue = OperationQueue()
+        operationQueue.name = "load-more-images-queue"
+        operationQueue.maxConcurrentOperationCount = 1
+        return operationQueue
+    }()
+    
     // MARK: - Init(s)
     
     init() {
@@ -40,9 +47,9 @@ final class FlickrSearchImageViewModel: ISearchImagesViewModel {
     }
     
     func loadMoreImages() {
-        guard hasMoreImageToFetch else { return }
-        currentPage += 1
-        _searchImagesByText(searchTerm, page: currentPage)
+        loadMoreImagesOperationQueue.addOperation { [weak self] in
+            self?._loadMoreImages()
+        }
     }
     
     func flickrPhoto(for imageURLProvider: ImageURLProvider) -> FlickrPhoto? {
@@ -54,6 +61,13 @@ final class FlickrSearchImageViewModel: ISearchImagesViewModel {
     }
     
     // MARK: -
+    
+    private func _loadMoreImages() {
+        guard hasMoreImageToFetch else { return }
+        currentPage += 1
+        _searchImagesByText(searchTerm, page: currentPage)
+        loadMoreImagesOperationQueue.cancelAllOperations()
+    }
     
     private func _searchImagesByText(_ text: String, page: Int) {
         flickrService.searchImagesByTitle(text, page: page, perPage: Self.resultsPerPage) { [weak self] result in
