@@ -89,6 +89,11 @@ final class SearchImagesViewController: UIViewController {
         unsubscribeToKeyboardNotifications()
     }
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        collectionView.collectionViewLayout.invalidateLayout()
+    }
+    
     // MARK: - Build View Hierarchy
     
     private func buildViewHierarchy() {
