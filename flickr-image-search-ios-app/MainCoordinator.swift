@@ -30,7 +30,8 @@ final class MainCoordinator {
 extension MainCoordinator: ISearchImagesCoordinator {
     
     func selectPhoto(flickrPhoto: FlickrPhoto) {
-        let imageDetailViewController = ImageDetailViewController()
+        let viewModel = FlickrImageDetailViewModel(image: flickrPhoto)
+        let imageDetailViewController = ImageDetailViewController(viewModel: viewModel)
         navigationController.pushViewController(imageDetailViewController, animated: true)
     }
 }

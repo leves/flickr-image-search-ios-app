@@ -38,6 +38,7 @@
 		FC95644E26374CF900DCC6A2 /* FlickrService+Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC95644D26374CF900DCC6A2 /* FlickrService+Endpoint.swift */; };
 		FC95645626374F0300DCC6A2 /* FlickrSearchImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC95645526374F0300DCC6A2 /* FlickrSearchImageViewModel.swift */; };
 		FC95645E26374F9200DCC6A2 /* FlickrPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC95645D26374F9200DCC6A2 /* FlickrPhoto.swift */; };
+		FC9564662637678000DCC6A2 /* FlickrImageDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9564652637678000DCC6A2 /* FlickrImageDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		FC95644D26374CF900DCC6A2 /* FlickrService+Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlickrService+Endpoint.swift"; sourceTree = "<group>"; };
 		FC95645526374F0300DCC6A2 /* FlickrSearchImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrSearchImageViewModel.swift; sourceTree = "<group>"; };
 		FC95645D26374F9200DCC6A2 /* FlickrPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhoto.swift; sourceTree = "<group>"; };
+		FC9564652637678000DCC6A2 /* FlickrImageDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrImageDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +233,7 @@
 		FC46ABCE26361BB30042C8AF /* ImageDetailScreen */ = {
 			isa = PBXGroup;
 			children = (
+				FC9564652637678000DCC6A2 /* FlickrImageDetailViewModel.swift */,
 				FC46ABCF26361BCA0042C8AF /* ImageDetailViewController */,
 				FC46ABEA2636206D0042C8AF /* InformationTableViewCell.swift */,
 			);
@@ -412,6 +415,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC9564662637678000DCC6A2 /* FlickrImageDetailViewModel.swift in Sources */,
 				FC46AB99263606530042C8AF /* ISearchImagesViewModel.swift in Sources */,
 				FC46ABD126361BDD0042C8AF /* ImageDetailViewController.swift in Sources */,
 				FC95643D263749BB00DCC6A2 /* FlickrService+Model.swift in Sources */,
