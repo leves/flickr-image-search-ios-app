@@ -11,5 +11,5 @@ import Foundation
 
 protocol ISearchImagesCoordinator: class {
     
-    func selectPhoto()
+    func selectPhoto(flickrPhoto: FlickrPhoto)
 }

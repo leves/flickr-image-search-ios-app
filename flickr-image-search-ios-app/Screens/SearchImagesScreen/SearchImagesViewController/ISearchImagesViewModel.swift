@@ -20,6 +20,7 @@ protocol ISearchImagesViewModel: class {
     
     func searchImagesByText(_ text: String)
     func loadMoreImages()
+    func flickrPhoto(for imageURLProvider: ImageURLProvider) -> FlickrPhoto?
     func configure(cell: ImageItemCollectionViewCell, withData data: ImageURLProvider)
 }
 

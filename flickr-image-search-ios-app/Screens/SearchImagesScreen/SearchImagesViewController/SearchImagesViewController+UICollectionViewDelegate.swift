@@ -15,7 +15,8 @@ extension SearchImagesViewController: UICollectionViewDelegate {
         guard let cell = collectionView.cellForItem(at: indexPath) else { return }
         guard cell is ImageItemCollectionViewCell else { return }
         guard let selectedImage = viewModel?.images[indexPath.row] else { return }
-        self.coordinator?.selectPhoto() // TODO: pass the photo
+        guard let flickrPhoto = viewModel?.flickrPhoto(for: selectedImage) else { return }
+        self.coordinator?.selectPhoto(flickrPhoto: flickrPhoto)
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {

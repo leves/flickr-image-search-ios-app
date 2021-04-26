@@ -28,7 +28,7 @@ final class MainCoordinator {
 
 extension MainCoordinator: ISearchImagesCoordinator {
     
-    func selectPhoto() {
+    func selectPhoto(flickrPhoto: FlickrPhoto) {
         let imageDetailViewController = ImageDetailViewController()
         navigationController.pushViewController(imageDetailViewController, animated: true)
     }
